@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Domain;
 using Microsoft.AspNetCore.Mvc;
@@ -24,7 +23,7 @@ namespace API.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<Activity>> GetActivity(Guid id)
+        public async Task<ActionResult<Activity>> GetActivity(Guid id) 
         {
             return await _context.Activities.FindAsync(id);
         }

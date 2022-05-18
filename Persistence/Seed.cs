@@ -1,3 +1,7 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Domain;
 
 namespace Persistence
@@ -7,7 +11,7 @@ namespace Persistence
         public static async Task SeedData(DataContext context)
         {
             if (context.Activities.Any()) return;
-
+            
             var activities = new List<Activity>
             {
                 new Activity
